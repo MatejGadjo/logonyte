@@ -1,0 +1,7 @@
+.active {
+  @apply bg-purple-600 text-black
+}
+
+.link:nth-child(7) {
+  @apply mt-auto
+}

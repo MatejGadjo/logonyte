@@ -1,0 +1,9 @@
+.label_style {
+    @apply flex items-center justify-center p-2 text-xl;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

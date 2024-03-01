@@ -1,0 +1,10 @@
+#logo {
+    position: relative;
+    /* width: 200px; */
+    user-select: none;
+}
+
+#logo>img {
+    width: 100%;
+    position: absolute;
+}

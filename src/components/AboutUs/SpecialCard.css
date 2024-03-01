@@ -1,0 +1,121 @@
+:root {
+    --border: rgb(255, 255, 255);
+    --g3: rgb(104, 7, 240);
+    --g2: rgb(0, 0, 0);
+    --g1: rgb(147, 51, 234);
+}
+
+.body_fake_2 {
+    display: grid;
+    margin-top: 12vh;
+    /* padding: 0px; */
+    place-items: center;
+}
+
+.card_custom_2 {
+    aspect-ratio: 1 / 1.6;
+    border: 0.5vmin solid var(--border);
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    width: 40vmin;
+    /* width: 100%; */
+    /* max-width: 400px; */
+  }
+  
+  .card_custom_2:hover:before {
+    background-position: 100% 100%;
+    transform: scale(1.08, 1.03);
+    border-radius: 25px;
+  }
+  
+  .card_custom_2:hover > .card-content_2 {
+    background-position: -10% 0%;
+    
+  }
+  
+  .card_custom_2:hover > .card-icon_2 {
+    color: white; 
+  }
+  
+  .card_custom_2:hover > .card-content_2 > .card-subtitle_2 > .card-subtitle-word {  
+    opacity: 1;
+    transform: translateY(0%);
+    transition: opacity 0ms, transform 200ms cubic-bezier(.90, .06, .15, .90);
+  }
+  
+  .card_custom_2:before {
+    background: linear-gradient(
+      130deg, 
+      transparent 0% 33%, 
+      var(--g1) 66%, 
+      var(--g2) 83.5%, 
+      var(--g3) 100%
+    );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    left: 0px;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    transition: background-position 350ms ease, transform 350ms ease;
+    width: 100%;
+    z-index: 1;
+    border-radius: 25px;
+  }
+  
+  .card-content_2 {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.2) 8%, 
+      transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
+    height: calc(100% - 10vmin);
+    padding: 5vmin;
+    position: relative;
+    transition: background-position 350ms ease;
+    width: calc(100% - 10vmin);
+    z-index: 2;
+  }
+  
+  .card-title_custom_2,
+  .card-subtitle_2 {
+    color: white;
+    /* font-family: "Anek Latin", sans-serif; */
+    font-weight: 400;
+    margin: 0px;
+  }
+  
+  .card-title_custom_2 {
+    font-size: 3.9vmin;
+  }
+  
+  .card-subtitle_2 {
+    font-size: 2vmin;
+    margin-top: 2vmin;
+  }
+  
+  .card-subtitle-word {
+    display: inline-block;
+    margin: 0vmin 0.3vmin;
+    opacity: 0;
+    position: relative;  
+    transform: translateY(40%);
+    transition: none;
+  }
+  
+  .card-icon_2 {
+    bottom: 0px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 5vmin;
+    left: 0px;
+    margin: 5vmin;
+    position: absolute;
+    transition: color 250ms ease;
+    z-index: 2;
+  }
+
+  
