@@ -45,8 +45,8 @@ const Contact = ({ onScrollToFooter }) => {
     return (
         <div>
             {isMobile ? (
-                <div>
-                    <p>Lagano</p>
+                <div className="flex justify-center">
+                    <button onClick={handleClick} className="btn btn-wide">Contact</button>
                 </div>
             ) : (
                 <animated.div

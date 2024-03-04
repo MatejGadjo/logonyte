@@ -45,8 +45,8 @@ const InfoUs = ({ onScrollToInfoUsFull }) => {
     return (
         <div>
             {isMobile ? (
-                <div>
-                    <p>Lagano</p>
+                <div className="flex justify-center">
+                    <button onClick={handleClick} className="btn btn-wide">About us</button>
                 </div>
             ) : (
                 <animated.div

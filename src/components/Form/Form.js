@@ -18,15 +18,15 @@ const Form = () => {
     email: user ? user.email : "",
     username: user ? user.username : "",
     style: "",
-    iconsMascots: "",
+    icons: "",
     slogan: "",
-    industry: "",
-    colorTheme: "",
+    yourindustry: "",
+    colortheme: "",
   });
 
   const labels = [
     "Style",
-    "Icons/Mascots",
+    "Icons",
     "Slogan",
     "Your Industry",
     "Color Theme",
@@ -64,10 +64,10 @@ const Form = () => {
             email: user ? user.email : "",
             username: user ? user.username : "",
             style: "",
-            iconsMascots: "",
+            icons: "",
             slogan: "",
-            industry: "",
-            colorTheme: "",
+            yourindustry: "",
+            colortheme: "",
           });
           setShowModal(true); // Show the success modal
         } else {
@@ -78,9 +78,9 @@ const Form = () => {
       .catch((err) => {
         console.error("Error:", err);
       });
+      
   };
-
-
+  
   const closeModal = () => {
     setShowModal(false);
     setShowFailModal(false);
@@ -107,9 +107,9 @@ const Form = () => {
                 <div className="flex flex-col justify-center items-center">
                   <input
                     type="text"
-                    name={labels[index].toLowerCase()}
+                    name={labels[index].toLowerCase().replace(/\s+/g, '')}
                     placeholder={`ex. ${labels[index]}`}
-                    value={formData[labels[index].toLowerCase()]}
+                    value={formData[labels[index].toLowerCase().replace(/\s+/g, '')]}
                     onChange={handleChange}
                     className="placeholder:italic placeholder:text-center placeholder:text-xs placeholder:sm:text-sm placeholder:lg:text-lg mb-5 rounded-lg border-2 border-gray-900 px-2 w-1/2 sm:w-3/4 md:w-5/6 lg:w-full"
                   />

@@ -45,8 +45,8 @@ const FAQ = ({ onScrollToFAQFull }) => {
     return (
         <div>
           {isMobile ? (
-            <div>
-              <p>Lagano</p>
+            <div className="flex justify-center">
+              <button onClick={handleClick} className="btn btn-wide">FAQ</button>
             </div>
           ) : (
             <animated.div style={cardAnimation} className="body_fake_2">
