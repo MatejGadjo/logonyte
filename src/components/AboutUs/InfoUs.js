@@ -43,31 +43,24 @@ const InfoUs = ({ onScrollToInfoUsFull }) => {
     };
 
     return (
-        <div>
-            {isMobile ? (
-                <div className="flex justify-center">
-                    <button onClick={handleClick} className="btn btn-wide">About us</button>
-                </div>
-            ) : (
-                <animated.div
-                    style={cardAnimation}
-                    className="body_fake_2"
-                >
-                    <a
-                        href="#"
-                        onClick={handleClick}
-                        className="card_custom_2"
-                    >
-                        <div className="card-content_2">
-                            <h3 className="card-title_custom_2">About Us</h3>
-                            <h4 ref={subtitleRef} className="card-subtitle_2"></h4>
-                        </div>
-                        <i className="card-icon_2"><IoInformationCircleOutline /></i>
-                    </a>
-                </animated.div>
-            )}
 
-        </div>
+        <animated.div
+            style={cardAnimation}
+            className="body_fake_2"
+        >
+            <a
+                href="#"
+                onClick={handleClick}
+                className="card_custom_2"
+            >
+                <div className="card-content_2">
+                    <h3 className="card-title_custom_2">About Us</h3>
+                    <h4 ref={subtitleRef} className="card-subtitle_2"></h4>
+                </div>
+                <i className="card-icon_2"><IoInformationCircleOutline /></i>
+            </a>
+        </animated.div>
+
     );
 };
 

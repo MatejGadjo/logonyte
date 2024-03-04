@@ -24,7 +24,7 @@ const Signout = () => {
 
   return (
     <div>
-      {showText && <p className="h-screen flex items-center justify-center text-4xl sm:text-6xl ml-24 sm:mx-auto w-64 sm:w-[25rem] md:w-[32rem] lg:w-[39rem]">Logging out...</p>}
+      {showText && <p className="h-screen flex items-center justify-center text-4xl sm:text-6xl pl-20 mx-auto sm:mx-auto w-64 sm:w-[25rem] md:w-[32rem] lg:w-[39rem]">Logging out...</p>}
     </div>
   );
 };

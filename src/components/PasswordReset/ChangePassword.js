@@ -62,14 +62,14 @@ const ChangePassword = () => {
         >
             <div className="w-64 flex items-center justify-center sm:w-[25rem] md:w-[32rem] lg:w-[39rem] border-2 rounded-2xl p-10">
                 <form className="text-white" onSubmit={handleSubmit}>
-                    <label className="text-lg p-2">Old Password</label>
+                    <label className="p-2">Old Password</label>
                     <input
                         type="password"
                         value={oldPassword}
                         onChange={(e) => setOldPassword(e.target.value)}
                         className="mb-5 rounded-lg border-2 border-gray-900 px-2"
                     />
-                    <label className="text-lg p-2">New Password</label>
+                    <label className="p-2">New Password</label>
                     <input
                         type="password"
                         value={newPassword}
@@ -77,7 +77,7 @@ const ChangePassword = () => {
                         className="mb-2 rounded-lg border-2 border-gray-900 px-2"
                     />
 
-                    <label className="text-lg p-2">Confirm New Password</label>
+                    <label className="p-2">Confirm New Password</label>
                     <input
                         type="password"
                         value={confirmNewPassword}

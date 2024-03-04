@@ -6,8 +6,11 @@ import '../Title/Title.css';
 import FAQFull from "./FAQFull";
 import InfoUsFull from "./InfoUsFull";
 import '../CardList/CardList.css';
+import { useResponsive } from "../../custom hooks/useResponsive";
 
 const AboutUs = () => {
+
+    const isMobile = useResponsive();
 
     const handleScrollToFAQFull = () => {
         const scrollTarget = document.getElementById("faqFull");
@@ -32,15 +35,27 @@ const AboutUs = () => {
 
     return (
         <div>
-            <div className="cardlist_pos pl-16 sm:pl-0 mx-auto xl:h-screen">
-                <FAQ onScrollToFAQFull={handleScrollToFAQFull} />
-                <Contact onScrollToFooter={handleScrollToFooter} />
-                <InfoUs onScrollToInfoUsFull={handleScrollToInfoUsFull} />
-            </div>
-            <div>
-                <FAQFull />
-                <InfoUsFull />
-            </div>
+            {isMobile ? (
+                <div>
+                    <div>
+                        <FAQFull />
+                        <InfoUsFull />
+                    </div>
+                </div>
+            ) : (
+                <div>
+                    <div className="cardlist_pos pl-16 sm:pl-0 mx-auto xl:h-screen">
+                        <FAQ onScrollToFAQFull={handleScrollToFAQFull} />
+                        <Contact onScrollToFooter={handleScrollToFooter} />
+                        <InfoUs onScrollToInfoUsFull={handleScrollToInfoUsFull} />
+                    </div>
+                    <div>
+                        <FAQFull />
+                        <InfoUsFull />
+                    </div>
+                </div>
+            )}
+
         </div>
     )
 }
