@@ -3,6 +3,7 @@ import { Disclosure } from '@headlessui/react'
 import { IoChevronForwardCircleOutline, IoChevronDownCircleOutline } from "react-icons/io5";
 import "./FAQFull.css";
 import { useResponsive } from "../../custom hooks/useResponsive";
+import { useSpring, animated } from "react-spring";
 
 const faqs = [
     {
@@ -22,12 +23,19 @@ const faqs = [
 
 const FAQFull = () => {
 
+    const cardAnimation = useSpring({
+        opacity: 1,
+        from: { opacity: 0 },
+        delay: 100,
+        config: { duration: 400 },
+      });
+
     const isMobile = useResponsive()
 
     return (
         <div>
             {isMobile ? (
-                <div id="faqFull" className="pl-16 sm:pl-0">
+                <animated.div style={cardAnimation} id="faqFull" className="pl-16 sm:pl-0">
                     <div className="mx-auto px-6 py-10">
                         <div className="mx-auto divide-y divide-white-900/10">
                             <h2 className="text-2xl font-bold leading-10 tracking-tight text-white-900">Frequently asked questions</h2>
@@ -58,10 +66,10 @@ const FAQFull = () => {
                             </dl>
                         </div>
                     </div>
-                </div>
+                </animated.div>
             ) : (
 
-                <div id="faqFull" className="pt-6 pl-16 sm:pl-0">
+                <animated.div style={cardAnimation} id="faqFull" className="pt-6 pl-16 sm:pl-0">
                     <div className="border-4 rounded-xl mt-24 w-64 background-reversed mx-auto sm:w-[25rem] md:w-[32rem] lg:w-[39rem] xl:w-[60rem] 2xl:w-[70rem]">
                         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
                             <div className="mx-auto max-w-4xl divide-y divide-white-900/10">
@@ -94,7 +102,7 @@ const FAQFull = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </animated.div>
             )}
         </div>
     )
