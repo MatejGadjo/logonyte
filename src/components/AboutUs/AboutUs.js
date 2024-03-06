@@ -10,7 +10,7 @@ import { useResponsive } from "../../custom hooks/useResponsive";
 
 const AboutUs = () => {
 
-    const isMobile = useResponsive();
+    const { isMobile, isTablet } = useResponsive();
 
     const handleScrollToFAQFull = () => {
         const scrollTarget = document.getElementById("faqFull");
@@ -35,7 +35,7 @@ const AboutUs = () => {
 
     return (
         <div>
-            {isMobile ? (
+            {isMobile || isTablet ? (
                 <div>
                     <div>
                         <FAQFull />

@@ -2,11 +2,9 @@ import React, { useEffect, useRef } from "react";
 import './SpecialCard.css';
 import { IoHelpCircleOutline } from "react-icons/io5";
 import { useSpring, animated } from "react-spring";
-import { useResponsive } from "../../custom hooks/useResponsive";
+
 
 const FAQ = ({ onScrollToFAQFull }) => {
-
-  const isMobile = useResponsive();
 
   const cardAnimation = useSpring({
     opacity: 1,

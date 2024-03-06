@@ -30,11 +30,11 @@ const FAQFull = () => {
         config: { duration: 400 },
       });
 
-    const isMobile = useResponsive()
+    const { isMobile, isTablet } = useResponsive()
 
     return (
         <div>
-            {isMobile ? (
+            {isMobile || isTablet ? (
                 <animated.div style={cardAnimation} id="faqFull" className="pl-16 sm:pl-0">
                     <div className="mx-auto px-6 py-10">
                         <div className="mx-auto divide-y divide-white-900/10">

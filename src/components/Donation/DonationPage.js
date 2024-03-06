@@ -6,7 +6,7 @@ import { useResponsive } from "../../custom hooks/useResponsive";
 
 const DonationPage = () => {
 
-    const isMobile = useResponsive();
+    const { isMobile, isTablet } = useResponsive();
 
     const [isChecked, setIsChecked] = useState(false);
     
@@ -67,8 +67,8 @@ const DonationPage = () => {
 
     return (
         <div>
-            {isMobile ? (
-                <div className={`ml-16 ${isChecked ? "h-screen" : ""}`}>
+            {isMobile || isTablet ? (
+                <div className={`ml-16 sm:ml-0 ${isChecked ? "h-screen" : ""}`}>
                     <div className={`p-4 text-center ${isChecked ? "" : "hidden"}`}>
                         <animated.h1 style={textAnimationFirst} className="text-3xl font-bold mb-4 mt-10">Support Our Vision</animated.h1>
                         <animated.p

@@ -12,11 +12,11 @@ const InfoUsFull = () => {
         config: { duration: 400 },
       });
 
-    const isMobile = useResponsive();
+    const { isMobile, isTablet } = useResponsive();
 
     return (
         <div>
-            {isMobile ? (
+            {isMobile || isTablet ? (
                 <animated.div style={cardAnimation} id="infoUsFull" className="py-6 pl-16 sm:pl-0">
                     <div className="mx-auto max-w-7xl px-6 py-20 ">
                         <div className="mx-auto max-w-4xl">

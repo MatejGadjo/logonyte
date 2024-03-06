@@ -6,8 +6,6 @@ import { useResponsive } from "../../custom hooks/useResponsive";
 
 const InfoUs = ({ onScrollToInfoUsFull }) => {
 
-    const isMobile = useResponsive();
-
     const cardAnimation = useSpring({
         opacity: 1,
         from: { opacity: 0 },
