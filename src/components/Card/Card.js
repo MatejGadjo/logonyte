@@ -5,7 +5,7 @@ import { useResponsive } from "../../custom hooks/useResponsive";
 
 const Card = ({ image, description }) => {
 
-    const isMobile = useResponsive();
+    const { isMobile, isTablet } = useResponsive();
 
     const cardAnimation = useSpring({
         opacity: 1,
@@ -28,7 +28,7 @@ const Card = ({ image, description }) => {
 
     return (
         <animated.div style={cardAnimation}>
-            {isMobile ? (
+            {isMobile || isTablet ? (
                 <animated.div
                     ref={ref}
                     style={cardSpring}

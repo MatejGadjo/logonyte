@@ -35,7 +35,7 @@ const items = [
             <div className="pl-16 sm:pl-0">
                 <div className="w-64 mx-auto sm:w-[20rem] md:w-[25rem] lg:w-[50rem]">
                     <h1 className="text-center text-4xl md:text-3xl xl:text-4xl font-bold p-10 ">Let us save you money</h1>
-                    <p className="text-center text-base lg:text-lg mb-24">Why spend a fortune and endless hours hiring a designer for your logo?
+                    <p className=" text-center text-base lg:text-lg mb-24">Why spend a fortune and endless hours hiring a designer for your logo?
                         With our catalog of ready-made logos and a simple custom logo request form, you can bring your dream logo to life for <span className="text-green-300 font-bold">FREE</span>.
                         Describe your vision, and we'll make it a reality.
                     </p>
@@ -137,8 +137,8 @@ const items = [
                 <div className="pl-16 sm:pl-0">
                     <div className="w-64 text-center mx-auto sm:w-[20rem] md:w-[30rem] lg:w-[40rem] xl:w-[55rem]">
                         <p>Tailored for web application developers looking to quickly and affordably create
-                            custom icons with a high degree of consistency and customization.
-                            Although designers have their role, our AI-powered tool can greatly complement your design resources.
+                            custom logo with a high degree of consistency and customization.
+                            Although designers have their role, our tool can greatly complement your design resources.
                         </p>
                     </div>
                 </div>

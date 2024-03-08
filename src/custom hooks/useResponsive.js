@@ -8,7 +8,7 @@ export const useResponsive = () => {
     // Logic to check screen size and set isMobile accordingly
     const handleResize = () => {
       setIsMobile(window.innerWidth < 640); // Adjust the breakpoint as needed
-      setIsTablet(window.innerWidth >= 640 && window.innerWidth < 1024)
+      setIsTablet(window.innerWidth >= 640 && window.innerWidth <= 1024)
     };
 
     window.addEventListener('resize', handleResize);

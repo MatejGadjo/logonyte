@@ -3,13 +3,14 @@ import './DonationPage.css';
 import { SiBuymeacoffee } from "react-icons/si";
 import { useSpring, animated } from "react-spring";
 import { useResponsive } from "../../custom hooks/useResponsive";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 const DonationPage = () => {
 
     const { isMobile, isTablet } = useResponsive();
 
     const [isChecked, setIsChecked] = useState(false);
-    
+
     const [checkboxOpacity, setCheckboxOpacity] = useState(1);
 
     const handleCheckboxClick = () => {
@@ -70,13 +71,13 @@ const DonationPage = () => {
             {isMobile || isTablet ? (
                 <div className={`ml-16 sm:ml-0 ${isChecked ? "h-screen" : ""}`}>
                     <div className={`p-4 text-center ${isChecked ? "" : "hidden"}`}>
-                        <animated.h1 style={textAnimationFirst} className="text-3xl font-bold mb-4 mt-10">Support Our Vision</animated.h1>
+                        <animated.h1 style={textAnimationFirst} className="text-3xl font-bold mb-4 mt-10 sm:text-6xl">Support Our Vision</animated.h1>
                         <animated.p
                             style={textAnimationSecond}
-                            className="text-lg mb-4">
+                            className="text-lg mb-4 sm:text-2xl">
                             If you've been loving our logos or enjoying our exceptional service, consider showing your support through a donation. Your contribution helps us continue delivering quality and making a difference.
                         </animated.p>
-                        <a href="https://www.buymeacoffee.com/logonyte" target="_blank" rel="noopener noreferrer" className="btn">
+                        <a href="https://www.buymeacoffee.com/logonyte" target="_blank" rel="noopener noreferrer" className="btn sm:w-64 sm:text-xl sm:h-16">
                             Donate Now
                         </a>
                     </div>
@@ -89,25 +90,32 @@ const DonationPage = () => {
                             checked={isChecked}
                             // onChange={() => setIsChecked(!isChecked)}
                             onChange={handleCheckboxClick}
-                            />
+                        />
                     </div>
+                    <animated.div style={cardAnimation}>
+                        <ProgressBar />
+                    </animated.div>
+
 
                 </div>
             ) : (
-                <animated.div
-                    style={cardAnimation}
-                    className="body_fake"
-                >
-                    <a href="https://www.buymeacoffee.com/logonyte" target="_blank" rel="noopener noreferrer"
-                        className="card_custom ml-16 sm:ml-0"
+                <animated.div style={cardAnimation}>
+                    <div
+                        className="body_fake"
                     >
-                        <div className="card-content">
-                            <h3 className="card-title_custom">Click to Reveal the Magic</h3>
-                            <h4 ref={subtitleRef} className="card-subtitle"></h4>
-                        </div>
-                        <i className="card-icon"><SiBuymeacoffee /></i>
-                    </a>
+                        <a href="https://www.buymeacoffee.com/logonyte" target="_blank" rel="noopener noreferrer"
+                            className="card_custom ml-16 sm:ml-0"
+                        >
+                            <div className="card-content">
+                                <h3 className="card-title_custom">Click to Reveal the Magic</h3>
+                                <h4 ref={subtitleRef} className="card-subtitle"></h4>
+                            </div>
+                            <i className="card-icon"><SiBuymeacoffee /></i>
+                        </a>
+                    </div>
+                    <ProgressBar />
                 </animated.div>
+
             )}
         </div>
     );
