@@ -66,6 +66,9 @@ const DonationPage = () => {
         }
     }, []);
 
+
+    
+
     return (
         <div>
             {isMobile || isTablet ? (
@@ -92,9 +95,9 @@ const DonationPage = () => {
                             onChange={handleCheckboxClick}
                         />
                     </div>
-                    <animated.div style={cardAnimation}>
+                    {isChecked && <animated.div style={cardAnimation}>
                         <ProgressBar />
-                    </animated.div>
+                    </animated.div>}
 
 
                 </div>

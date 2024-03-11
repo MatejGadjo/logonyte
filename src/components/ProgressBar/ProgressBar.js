@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import { PiCurrencyDollarBold } from "react-icons/pi";
 
@@ -12,8 +12,23 @@ const ProgressBar = () => {
         config: { duration: 5000, easing: (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t) },
     });
 
-    React.useEffect(() => {
-        setValue(30);
+    useEffect(() => {
+        const fetchDonationInfo = async () => {
+            try {
+                const response = await fetch('http://localhost:3000/donationinfo', {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                      },
+                })
+                const data = await response.json();
+                setValue(data.totalAmount);
+            } catch (error) {
+                console.error('Error fetching donation information', error);
+            }
+        };
+
+        fetchDonationInfo();
     }, []);
 
     return (
