@@ -11,6 +11,7 @@ const CardList = () => {
                     key={index}
                     image={card.image}
                     description={card.description}
+                    link={card.link}
                 />
             ))}
         </div>

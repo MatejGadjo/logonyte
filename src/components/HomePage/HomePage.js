@@ -5,7 +5,7 @@ import { TbFileTypeSvg } from "react-icons/tb";
 import { FaImages } from "react-icons/fa6";
 import { FaSearchDollar, FaMagic, FaBullhorn } from "react-icons/fa";
 import ReviewCard from "../ReviewCard/ReviewCard";
-import img4 from "../Images/istockphoto-1158342659-612x612.jpg"
+import img4 from "../Images/coffee1.png"
 import AnimatedItem from "../AnimatedItem/AnimatedItem";
 import Title from "../Title/Title";
 import { Link } from "react-router-dom";

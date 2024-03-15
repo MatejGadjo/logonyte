@@ -3,7 +3,7 @@ import './Card.css';
 import { useInView, useSpring, animated } from "react-spring";
 import { useResponsive } from "../../custom hooks/useResponsive";
 
-const Card = ({ image, description }) => {
+const Card = ({ image, description, link }) => {
 
     const { isMobile, isTablet } = useResponsive();
 
@@ -40,7 +40,7 @@ const Card = ({ image, description }) => {
                         <div className="card-body">
                             <p className="text-white">{description}</p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Buy Now</button>
+                                <a href={link} className="btn btn-primary">Buy Now</a>
                             </div>
                         </div>
                     </div>
@@ -56,11 +56,11 @@ const Card = ({ image, description }) => {
                         onMouseLeave={() => setIsHover(false)}
                     >
                         <figure>
-                            <img src={image} alt="" className="w-64 h-64" />
+                            <img src={image} alt="logo" className="w-64 h-64 bg-white" />
                         </figure>
 
 
-                        <div className="bg-gray-800 rounded-b-[1rem] p-2 text-white">
+                        <div className="bg-purple-600 rounded-b-[1rem] p-2 text-white">
                             <p className="text-center">{description}</p>
                         </div>
 
@@ -68,10 +68,10 @@ const Card = ({ image, description }) => {
 
                     </div>
 
-                    <button className={isHover ? "opacity-80 custom_button transition-all duration-300 ease-in" : "opacity-0 custom_button transition-all duration-300 ease-out"}
+                    <a href={link} className={isHover ? "opacity-80 custom_button transition-all duration-300 ease-in" : "opacity-0 custom_button transition-all duration-300 ease-out"}
                         onMouseEnter={() => setIsHover(true)}
                         onMouseLeave={() => setIsHover(false)}
-                    >Buy Now</button>
+                    >Buy Now</a>
 
                 </animated.div>
             )}

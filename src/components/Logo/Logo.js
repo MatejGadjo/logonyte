@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
 import './Logo.css';
+import img1 from '../Images/color1.png'
+import img2 from '../Images/color4.png'
+import img3 from '../Images/color5.png'
+
 
 const Logo = () => {
     useEffect(() => {
@@ -56,31 +60,21 @@ const Logo = () => {
 
     return (
         <>
-            <div id="logo" className='w-28 sm:w-36 md:w-44 lg:w-52 xl:w-60 ml-16 sm:ml-0 mx-auto'>
+            <div id="logo" className='w-28 sm:w-36 md:w-44 lg:w-52 xl:w-60 ml-16 sm:ml-0 mx-auto pb-10'>
                 <img
-                    src="https://assets.codepen.io/1468070/Hyperplexed+Logo+-+Color+1.svg"
+                    src={img3}
                     draggable="false"
                     alt="Logo 1"
                 />
                 <img
-                    src="https://assets.codepen.io/1468070/Hyperplexed+Logo+-+Color+2.svg"
+                    src={img2}
                     draggable="false"
                     alt="Logo 2"
                 />
                 <img
-                    src="https://assets.codepen.io/1468070/Hyperplexed+Logo+-+Color+3.svg"
+                    src={img1}
                     draggable="false"
                     alt="Logo 3"
-                />
-                <img
-                    src="https://assets.codepen.io/1468070/Hyperplexed+Logo+-+Color+4.svg"
-                    draggable="false"
-                    alt="Logo 4"
-                />
-                <img
-                    src="https://assets.codepen.io/1468070/Hyperplexed+Logo+-+Color+5.svg"
-                    draggable="false"
-                    alt="Logo 5"
                 />
             </div>
         </>
