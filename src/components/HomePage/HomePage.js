@@ -5,10 +5,16 @@ import { TbFileTypeSvg } from "react-icons/tb";
 import { FaImages } from "react-icons/fa6";
 import { FaSearchDollar, FaMagic, FaBullhorn } from "react-icons/fa";
 import ReviewCard from "../ReviewCard/ReviewCard";
-import img4 from "../Images/coffee1.png"
+import banner from "../Images/banner.png"
 import AnimatedItem from "../AnimatedItem/AnimatedItem";
 import Title from "../Title/Title";
 import { Link } from "react-router-dom";
+import man1 from "../Images/man1.png"
+import man2 from "../Images/man2.png"
+import man3 from "../Images/man3.png"
+import woman1 from "../Images/woman1.png"
+import woman2 from "../Images/woman2.png"
+import woman3 from "../Images/woman3.png"
 
 
 const items = [
@@ -24,7 +30,7 @@ const items = [
                             <Link to="/catalog" className="btn btn-primary bg-purple-600">Get yours now!</Link>
                         </div>
                     </div>
-                    <img src={img4} alt="panda"></img>
+                    <img src={banner} alt="banner" className="background-reversed"></img>
                 </div>
             </div>
         ),
@@ -91,37 +97,37 @@ const items = [
 
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mb-24 mx-auto md:w-[34rem] lg:w-[49rem] xl:w-[55rem]">
                     <ReviewCard
-                        picture={img4}
+                        picture={woman1}
                         username={"Sarah"}
                         star={<IoStar />}
                         text={"A lifesaver for startups. It's made logo design accessible and affordable without compromising on quality."}
                     />
                     <ReviewCard
-                        picture={img4}
+                        picture={man1}
                         username={"David"}
                         star={<IoStar />}
                         text={"A must-have tool for designers and non-designers alike. It's intuitive, and the results are top-notch."}
                     />
                     <ReviewCard
-                        picture={img4}
-                        username={"Aarav"}
+                        picture={woman2}
+                        username={"Iris"}
                         star={<IoStar />}
                         text={"Simplifies logo creation like no other app. The options are endless, and the quality is exceptional."}
                     />
                     <ReviewCard
-                        picture={img4}
+                        picture={woman3}
                         username={"Lisa"}
                         star={<IoStar />}
                         text={"Lives up to its name. I'm continually impressed by the quality and versatility of logos I can choose from."}
                     />
                     <ReviewCard
-                        picture={img4}
+                        picture={man2}
                         username={"Jason"}
                         star={<IoStar />}
                         text={"Transformed my logo design process! It's a game-changer for anyone looking to create stunning logos with ease."}
                     />
                     <ReviewCard
-                        picture={img4}
+                        picture={man3}
                         username={"Max"}
                         star={<IoStar />}
                         text={"My go-to logo creation tool. It's user-friendly, and the logos are always pixel-perfect. Highly recommended!"}

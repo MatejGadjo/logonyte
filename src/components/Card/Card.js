@@ -71,7 +71,9 @@ const Card = ({ image, description, link }) => {
                     <a href={link} className={isHover ? "opacity-80 custom_button transition-all duration-300 ease-in" : "opacity-0 custom_button transition-all duration-300 ease-out"}
                         onMouseEnter={() => setIsHover(true)}
                         onMouseLeave={() => setIsHover(false)}
-                    >Buy Now</a>
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Get Now</a>
 
                 </animated.div>
             )}
