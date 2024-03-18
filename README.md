@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Getting Started with LogoNyte
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to LogoNyte! LogoNyte is a React web application designed to create, manage, and showcase logos. Below are the instructions to get started with the app.
+
+## Installation
+
+To install LogoNyte, follow these steps:
+
+1. Clone the repository to your local machine using git clone.
+2. Navigate to the project directory.
+3. Install dependencies by running `npm install`.
+
 
 ## Available Scripts
 
@@ -68,3 +77,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Enjoy using Logonyte! If you have any questions or need assistance, feel free to reach out.
