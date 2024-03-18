@@ -78,9 +78,9 @@ const Form = () => {
       .catch((err) => {
         console.error("Error:", err);
       });
-      
+
   };
-  
+
   const closeModal = () => {
     setShowModal(false);
     setShowFailModal(false);

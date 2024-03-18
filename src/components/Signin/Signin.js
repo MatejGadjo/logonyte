@@ -19,6 +19,7 @@ const Signin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const [message, setMessage] = useState("");
 
     const onEmailChange = (event) => {
         setEmail(event.target.value)
@@ -47,6 +48,7 @@ const Signin = () => {
                     navigate("/");
                 } else {
                     // Handle unsuccessful login
+                    setMessage("Invalid password or username");
                     console.log("Invalid credentials");
                 }
             })
@@ -65,6 +67,7 @@ const Signin = () => {
                         <input type="email" value={email} onChange={onEmailChange} className="mb-5 rounded-lg border-2 border-gray-900 px-2" />
                         <label className="p-2 text-xl">Password</label>
                         <input type="password" value={password} onChange={onPasswordChange} className="mb-2 rounded-lg border-2 border-gray-900 px-2" />
+                        {message && <p className="text-red-500">{message}</p>}
                         <Link to="/forgotpassword" className="btn btn-ghost btn-xs mb-5"><u>Forgot your password?</u></Link>
                         <button className="btn btn-outline" type="submit">LogIn</button>
                         <Link to="/register" className="btn btn-ghost btn-sm mt-5"><u>Don't have an account? Register</u></Link>
